@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Snake — Meu Primeiro Jogo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="hud">
+      <div class="stat">
+        <span class="stat-label">Pontos</span>
+        <span class="stat-value" id="score">0</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Recorde</span>
+        <span class="stat-value stat-value--muted" id="highscore">0</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Nível</span>
+        <span class="stat-value stat-value--muted" id="level">1</span>
+      </div>
+    </header>
+
+    <div class="board-shell">
+      <canvas id="board" width="480" height="480"></canvas>
+
+      <div class="overlay" id="overlay">
+        <div class="panel" id="panel">
+          <h1 class="title" id="panel-title">SNAKE</h1>
+          <p class="panel-text" id="panel-text">Use as setas ou WASD para mover.<br>Não bata na parede nem em você mesmo.</p>
+          <button class="btn" id="btn-start">Jogar</button>
+          <p class="hint">Espaço: pausar &nbsp;•&nbsp; R: reiniciar</p>
+        </div>
+      </div>
+
+      <div class="touch-controls">
+        <button class="dpad__btn dpad__btn--up" data-dir="up" aria-label="Cima">▲</button>
+        <button class="dpad__btn dpad__btn--left" data-dir="left" aria-label="Esquerda">◀</button>
+        <button class="dpad__btn dpad__btn--right" data-dir="right" aria-label="Direita">▶</button>
+        <button class="dpad__btn dpad__btn--down" data-dir="down" aria-label="Baixo">▼</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
